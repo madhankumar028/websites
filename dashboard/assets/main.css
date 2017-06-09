@@ -15,10 +15,6 @@ body {
   border-radius: 0;
 }
 
-.navbar-inverse {
-  /*background-color: grey;*/
-}
-
 nav>li>a {
   color: #fff;
   text-transform: uppercase;
