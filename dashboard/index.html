@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <!-- Assets Loading -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/main.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav tab">
+              <li><a>City</a></li>
+              <li class="selected"><a href="#overview">Overview</a></li>
+              <li><a>Projects</a></li>
+              <li><a>Builders</a></li>
+              <li><a>Master</a></li>
+              <li><a>Team</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+             <li></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Welcome Note -->
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 class="welcome">Hello!</h3>
+      </div>
+    </div>
+    <!-- Activity -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5 col-xs-12 check-in">Checkin/Checkout</div>
+        <div class="col-sm-2 col-xs-12 task">Today's task</div>
+        <div class="col-sm-5 col-xs-12 recently">Recently Added</div>
+      </div>
+    </div>
+    <!-- Line-chart -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 chart">
+          <svg version="1.2" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" class="graph">
+            <g class="grid x-grid" id="xGrid">
+              <line x1="90" x2="90" y1="5" y2="371"></line>
+            </g>
+            <g class="grid y-grid" id="yGrid">
+              <line x1="90" x2="705" y1="370" y2="370"></line>
+            </g>
+            <g class="labels x-labels">
+              <text x="100" y="400">Mon</text>
+              <text x="246" y="400">Tue</text>
+              <text x="392" y="400">Wed</text>
+              <text x="538" y="400">Thu</text>
+              <text x="684" y="400">Fri</text>
+              <text x="684" y="400">Sat</text>
+            </g>
+            <g class="labels y-labels">
+              <text x="80" y="15">60</text>
+              <text x="80" y="131">40</text>
+              <text x="80" y="248">20</text>
+              <text x="80" y="373">0</text>
+              <text x="50" y="200" class="label-title">Price</text>
+            </g>
+            <g class="data" data-setname="Our first data set">
+              <circle cx="90" cy="192" data-value="7.2" r="4"></circle>
+              <circle cx="240" cy="141" data-value="8.1" r="4"></circle>
+              <circle cx="388" cy="179" data-value="7.7" r="4"></circle>
+              <circle cx="531" cy="200" data-value="6.8" r="4"></circle>
+              <circle cx="677" cy="104" data-value="6.7" r="4"></circle>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- Default route script -->
+    <script>
+        (function() {
+            if (window.location.hash) {
+                window.location.hash
+            } else {
+                window.location.hash = '#overview';
+            }
+        })();
+    </script>
+  </body>
+</html>

@@ -1,2 +1,3 @@
 # websites
-collection of websites (collected from dribble, friends).
+
+Collection of designs from dribble and which are inspired me.
