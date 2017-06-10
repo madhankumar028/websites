@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <!-- title -->
     <title>Dashboard</title>
     <!-- Assets Loading -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -9,8 +12,8 @@
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/main.css">
   </head>
-  <body>
-    <!-- Header -->
+  <body>    
+    <!-- Navigation -->
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -21,13 +24,17 @@
            </button>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav tab">
-              <li><a>City</a></li>
+          <ul class="nav navbar-nav tab">              
               <li class="selected"><a href="#overview">Overview</a></li>
               <li><a>Projects</a></li>
               <li><a>Builders</a></li>
               <li><a>Master</a></li>
               <li><a>Team</a></li>
+              <li>
+                <a href="#calendar">
+                  <span class="glyphicon glyphicon-calendar pull-right"></span>                                  
+                </a>
+              </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
              <li></li>
@@ -44,44 +51,278 @@
     <!-- Activity -->
     <div class="container">
       <div class="row">
-        <div class="col-sm-5 col-xs-12 check-in">Checkin/Checkout</div>
-        <div class="col-sm-2 col-xs-12 task">Today's task</div>
-        <div class="col-sm-5 col-xs-12 recently">Recently Added</div>
+        <div class="col-sm-4 col-xs-12 activity">
+          <h4>Checkin/Checkout</h4>          
+          <hr>
+          <div class="row activities">
+            <div class="col-sm-4 col-xs-4">
+              <h6>Checkin</h6>
+              <time>10:00 <sub>am</sub></time>
+            </div>
+            <div class="col-sm-4 col-xs-4">
+              <h6>Checkout</h6>
+              <time>10:20 <sub>am</sub></time>
+            </div>
+            <div class="col-sm-4 col-xs-4">
+              <h6>Total time</h6>
+              <time>9 <sub>hrs</sub> 30 <sub>mins</sub></time>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2 col-xs-12 task activity">
+          <h4>Today's task</h4>
+          <hr>
+          <div class="row activities">
+            <div class="col-sm-6 col-xs-6">
+              <h6>Follow up</h6>
+              <h4 class="value">19</h4>
+            </div>
+            <div class="col-sm-6 col-xs-6">
+              <h6>New calls</h6>
+              <h4 class="value">15</h4>
+            </div>          
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12 recently activity">
+          <h4>Recently Added</h4>
+          <hr>
+          <div class="row activities">
+            <div class="col-sm-4 col-xs-4">
+              <h6>Projects</h6>
+              <h4>19</h4>
+            </div>
+            <div class="col-sm-4 col-xs-4">
+              <h6>Builders</h6>
+              <h4>10</h4>
+            </div>
+            <div class="col-sm-4 col-xs-4">
+              <h6>Localities</h6>
+              <h4>5</h4>
+            </div>
+          </div>          
+        </div>
       </div>
     </div>
-    <!-- Line-chart -->
+    <!-- Tasks -->
+    <div class="jumbotron">
+      <div class="row works">
+        <div class="col-sm-12">
+          <p class="time"><span class="glyphicon glyphicon-time"></span> Your Tasks</p>
+          <button class="btn btn-warning">View all</button>
+        </div>
+      </div>
+      <hr>      
+      <div class="row description">
+        <div class="col-sm-2 task-description">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <small class="icon">
+                <span class="glyphicon glyphicon-earphone"></span>
+                Follow up
+                <small>
+                  <time>5:00<sub>pm</sub></time>
+                </small>
+              </small>
+            </div>                      
+          </div>
+          <div class="data">
+            <h5>Madhankumar
+              <small>Brigade Group</small>
+            </h5>
+            <hr>
+            <small>Contact</small>
+            <address>              
+              <small>+91 9994449266</small>
+              <small>abc@gmail.com</small>
+            </address>
+            <hr>
+            <small>City</small>
+            <address>
+              <small>Chennai</small>
+            </address>
+            <hr>
+            <small>Comments</small>            
+            <p class="comments">Lorem ipsum sdonvjkn sdakhvbka sbdavhb shbvdh</p>
+          </div>
+        </div>
+        <div class="col-sm-2 task-description">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <small class="icon">
+                <span class="glyphicon glyphicon-map-marker"></span>
+                Site visit
+                <small>
+                  <time>5:00<sub>pm</sub></time>
+                </small>
+              </small>
+            </div>
+          </div>
+          <div class="data">
+            <h5>Madhankumar
+              <small>Brigade Group</small>
+            </h5>
+            <hr>
+            <small>Contact</small>
+            <address>              
+              <small>+91 9994449266</small>
+              <small>abc@gmail.com</small>
+            </address>
+            <hr>
+            <small>City</small>
+            <address>
+              <small>Chennai</small>
+            </address>
+            <hr>
+            <small>Comments</small>            
+            <p class="comments">Lorem ipsum sdonvjkn sdakhvbka sbdavhb shbvdh</p>
+          </div>
+        </div>
+        <div class="col-sm-2 task-description">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <small class="icon">
+                <span class="glyphicon glyphicon-map-marker"></span>
+                Site visit
+                <small>
+                  <time>5:00<sub>pm</sub></time>
+                </small>
+              </small>
+            </div>
+          </div>
+          <div class="data">
+            <h5>Madhankumar
+              <small>Brigade Group</small>
+            </h5>
+            <hr>
+            <small>Contact</small>
+            <address>              
+              <small>+91 9994449266</small>
+              <small>abc@gmail.com</small>
+            </address>
+            <hr>
+            <small>City</small>
+            <address>
+              <small>Chennai</small>
+            </address>
+            <hr>
+            <small>Comments</small>            
+            <p class="comments">Lorem ipsum sdonvjkn sdakhvbka sbdavhb shbvdh</p>
+          </div>
+        </div>
+        <div class="col-sm-2 task-description">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <small class="icon">
+                <span class="glyphicon glyphicon-earphone"></span>
+                Follow up
+                <small>
+                  <time>5:00<sub>pm</sub></time>
+                </small>
+              </small>
+            </div>
+          </div>
+          <div class="data">
+            <h5>Madhankumar
+              <small>Brigade Group</small>
+            </h5>
+            <hr>
+            <small>Contact</small>
+            <address>              
+              <small>+91 9994449266</small>
+              <small>abc@gmail.com</small>
+            </address>
+            <hr>
+            <small>City</small>
+            <address>
+              <small>Chennai</small>
+            </address>
+            <hr>
+            <small>Comments</small>            
+            <p class="comments">Lorem ipsum sdonvjkn sdakhvbka sbdavhb shbvdh</p>
+          </div>
+        </div>
+        <div class="col-sm-2 task-description">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <small class="icon">
+                <span class="glyphicon glyphicon-earphone"></span>
+                Follow up
+                <small>
+                  <time>5:00<sub>pm</sub></time>
+                </small>
+              </small>
+            </div>
+          </div>
+          <div class="data">
+            <h5>Madhankumar
+              <small>Brigade Group</small>
+            </h5>
+            <hr>
+            <small>Contact</small>
+            <address>              
+              <small>+91 9994449266</small>
+              <small>abc@gmail.com</small>
+            </address>
+            <hr>
+            <small>City</small>
+            <address>
+              <small>Chennai</small>
+            </address>
+            <hr>
+            <small>Comments</small>            
+            <p class="comments">Lorem ipsum sdonvjkn sdakhvbka sbdavhb shbvdh</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Title -->
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 chart">
+        <div class="col-sm-12">
+          <h4>Projects Made Live Overview</h4>              
+        </div>
+      </div>
+    </div>
+
+    <div class="container_fluid">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-xs-12 chart">
           <svg version="1.2" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" class="graph">
             <g class="grid x-grid" id="xGrid">
               <line x1="90" x2="90" y1="5" y2="371"></line>
             </g>
             <g class="grid y-grid" id="yGrid">
-              <line x1="90" x2="705" y1="370" y2="370"></line>
+              <line x1="90" x2="720" y1="370" y2="370"></line>
             </g>
             <g class="labels x-labels">
               <text x="100" y="400">Mon</text>
               <text x="246" y="400">Tue</text>
               <text x="392" y="400">Wed</text>
               <text x="538" y="400">Thu</text>
-              <text x="684" y="400">Fri</text>
-              <text x="684" y="400">Sat</text>
+              <text x="684" y="400">Fri</text>              
             </g>
             <g class="labels y-labels">
               <text x="80" y="15">60</text>
               <text x="80" y="131">40</text>
               <text x="80" y="248">20</text>
-              <text x="80" y="373">0</text>
-              <text x="50" y="200" class="label-title">Price</text>
+              <text x="80" y="373">0</text>              
             </g>
-            <g class="data" data-setname="Our first data set">
-              <circle cx="90" cy="192" data-value="7.2" r="4"></circle>
-              <circle cx="240" cy="141" data-value="8.1" r="4"></circle>
-              <circle cx="388" cy="179" data-value="7.7" r="4"></circle>
-              <circle cx="531" cy="200" data-value="6.8" r="4"></circle>
-              <circle cx="677" cy="104" data-value="6.7" r="4"></circle>
+            <g class="data" fill="none" stroke="#e9842c">
+              <circle cx="90" cy="192" data-value="7.2" r="6" onmouseover="evt.target.setAttribute('r', '12');"
+                  onmouseout="evt.target.setAttribute('r', '6');"></circle>
+              <line x1="90" y1="192" x2="240" y2="141"  stroke-width="2"/>
+              <circle cx="240" cy="141" data-value="8.1" r="6" onmouseover="evt.target.setAttribute('r', '12');"
+                  onmouseout="evt.target.setAttribute('r', '6');"></circle>
+              <line x1="240" y1="141" x2="388" y2="179" stroke-width="2"/>
+              <circle cx="388" cy="179" data-value="7.7" r="6" onmouseover="evt.target.setAttribute('r', '12');"
+                  onmouseout="evt.target.setAttribute('r', '6');"></circle>
+              <line x1="388" y1="179" x2="531" y2="200" stroke-width="2"/>
+              <circle cx="531" cy="200" data-value="6.8" r="6" onmouseover="evt.target.setAttribute('r', '12');"
+                  onmouseout="evt.target.setAttribute('r', '6');"></circle>
+              <line x1="531" y1="200" x2="677" y2="104" stroke-width="2"/>
+              <circle cx="677" cy="104" data-value="6.7" r="6" onmouseover="evt.target.setAttribute('r', '12');"
+                  onmouseout="evt.target.setAttribute('r', '6');"></circle>
             </g>
           </svg>
         </div>
