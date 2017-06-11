@@ -235,7 +235,7 @@ body {
   .panel {
     right: 1.5rem;
     position: relative;
-    width: 14.8rem;
+    width: 18.6rem;
     border: 0;
   }
 
@@ -254,12 +254,12 @@ body {
     padding: 0;
   }
 
-  .description { margin: 2rem 2.5rem; }
+  .description { margin-top: 2rem; }
 
   .task-description {
     height: 300px;
     background-color: #595959;
-    margin-left: 1rem;
+    margin-left: 3rem;
   }
 
   h5 small {
