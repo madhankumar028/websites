@@ -29,12 +29,7 @@
               <li><a>Projects</a></li>
               <li><a>Builders</a></li>
               <li><a>Master</a></li>
-              <li><a>Team</a></li>
-              <li>
-                <a href="#calendar">
-                  <span class="glyphicon glyphicon-calendar pull-right"></span>                                  
-                </a>
-              </li>
+              <li><a>Team</a></li>              
           </ul>
           <ul class="nav navbar-nav navbar-right">
              <li></li>
@@ -65,7 +60,7 @@
             </div>
             <div class="col-sm-4 col-xs-4">
               <h6>Total time</h6>
-              <time>9 <sub>hrs</sub> 30 <sub>mins</sub></time>
+              <time>9<sub>hrs</sub> 30<sub>mins</sub></time>
             </div>
           </div>
         </div>
@@ -106,7 +101,7 @@
     <!-- Tasks -->
     <div class="jumbotron">
       <div class="row works">
-        <div class="col-sm-12">
+        <div class="col-sm-12 view">
           <p class="time"><span class="glyphicon glyphicon-time"></span> Your Tasks</p>
           <button class="btn btn-warning">View all</button>
         </div>
@@ -283,51 +278,49 @@
         </div>
       </div>
     </div>
-
-    <div class="container_fluid">
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-xs-12 chart">
-          <svg version="1.2" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" class="graph">
-            <g class="grid x-grid" id="xGrid">
-              <line x1="90" x2="90" y1="5" y2="371"></line>
-            </g>
-            <g class="grid y-grid" id="yGrid">
-              <line x1="90" x2="720" y1="370" y2="370"></line>
-            </g>
-            <g class="labels x-labels">
-              <text x="100" y="400">Mon</text>
-              <text x="246" y="400">Tue</text>
-              <text x="392" y="400">Wed</text>
-              <text x="538" y="400">Thu</text>
-              <text x="684" y="400">Fri</text>              
-            </g>
-            <g class="labels y-labels">
-              <text x="80" y="15">60</text>
-              <text x="80" y="131">40</text>
-              <text x="80" y="248">20</text>
-              <text x="80" y="373">0</text>              
-            </g>
-            <g class="data" fill="none" stroke="#e9842c">
-              <circle cx="90" cy="192" data-value="7.2" r="6" onmouseover="evt.target.setAttribute('r', '12');"
-                  onmouseout="evt.target.setAttribute('r', '6');"></circle>
-              <line x1="90" y1="192" x2="240" y2="141"  stroke-width="2"/>
-              <circle cx="240" cy="141" data-value="8.1" r="6" onmouseover="evt.target.setAttribute('r', '12');"
-                  onmouseout="evt.target.setAttribute('r', '6');"></circle>
-              <line x1="240" y1="141" x2="388" y2="179" stroke-width="2"/>
-              <circle cx="388" cy="179" data-value="7.7" r="6" onmouseover="evt.target.setAttribute('r', '12');"
-                  onmouseout="evt.target.setAttribute('r', '6');"></circle>
-              <line x1="388" y1="179" x2="531" y2="200" stroke-width="2"/>
-              <circle cx="531" cy="200" data-value="6.8" r="6" onmouseover="evt.target.setAttribute('r', '12');"
-                  onmouseout="evt.target.setAttribute('r', '6');"></circle>
-              <line x1="531" y1="200" x2="677" y2="104" stroke-width="2"/>
-              <circle cx="677" cy="104" data-value="6.7" r="6" onmouseover="evt.target.setAttribute('r', '12');"
-                  onmouseout="evt.target.setAttribute('r', '6');"></circle>
-            </g>
-          </svg>
-        </div>
-      </div>
+    <!-- SVG Linechart -->
+    <div class="svg-container">
+      <svg version="1.2" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" class="graph"
+        viewBox="0 0 750 750">
+        <g class="grid x-grid" id="xGrid">
+          <line x1="90" x2="90" y1="5" y2="371"></line>
+        </g>
+        <g class="grid y-grid" id="yGrid">
+          <line x1="90" x2="720" y1="370" y2="370"></line>
+        </g>
+        <g class="labels x-labels">
+          <text x="100" y="400">Mon</text>
+          <text x="246" y="400">Tue</text>
+          <text x="392" y="400">Wed</text>
+          <text x="538" y="400">Thu</text>
+          <text x="684" y="400">Fri</text>              
+        </g>
+        <g class="labels y-labels">
+          <text x="80" y="15">60</text>
+          <text x="80" y="131">40</text>
+          <text x="80" y="248">20</text>
+          <text x="80" y="373">0</text>              
+        </g>
+        <g class="data" fill="none" stroke="#e9842c">
+          <circle cx="90" cy="192" data-value="7.2" r="6" onmouseover="evt.target.setAttribute('r', '12');"
+              onmouseout="evt.target.setAttribute('r', '6');"></circle>
+          <line x1="90" y1="192" x2="240" y2="141"  stroke-width="2"/>
+          <circle cx="240" cy="141" data-value="8.1" r="6" onmouseover="evt.target.setAttribute('r', '12');"
+              onmouseout="evt.target.setAttribute('r', '6');"></circle>
+          <line x1="240" y1="141" x2="388" y2="179" stroke-width="2"/>
+          <circle cx="388" cy="179" data-value="7.7" r="6" onmouseover="evt.target.setAttribute('r', '12');"
+              onmouseout="evt.target.setAttribute('r', '6');"></circle>
+          <line x1="388" y1="179" x2="531" y2="200" stroke-width="2"/>
+          <circle cx="531" cy="200" data-value="6.8" r="6" onmouseover="evt.target.setAttribute('r', '12');"
+              onmouseout="evt.target.setAttribute('r', '6');"></circle>
+          <line x1="531" y1="200" x2="677" y2="104" stroke-width="2"/>
+          <circle cx="677" cy="104" data-value="6.7" r="6" onmouseover="evt.target.setAttribute('r', '12');"
+              onmouseout="evt.target.setAttribute('r', '6');"></circle>
+        </g>
+      </svg>
     </div>
+            
     <!-- Default route script -->
     <script>
         (function() {

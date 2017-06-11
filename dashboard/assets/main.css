@@ -3,7 +3,7 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
-}
+} /* Reset*/
 
 body {
   font-family: OpenSans;
@@ -29,110 +29,157 @@ body {
 
 .selected a { color: #ff8d00; }
 
-@media screen and (max-device-width:480px) and (orientation: landscape) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /*Smartphones*/
   
   .welcome { margin-left: 2rem; }
 
   .activity {
-    width: 450px;
-    height: 150px;    
-    margin-left: -7rem;    
-  }
+    background-color: #343434;
+    width: 80%;
+    height: 180px;    
+    color: #bcbcb7;
+    margin-left: 4.5rem;    
+    margin-top: 2rem;
+  } 
 
   .activities {
     margin-top: 5rem;
   }
-
-  .task {
-    margin-top: 3rem;
-    margin-left: -7rem;    
-  }
   
-  .value { margin-right: 15rem; }
-
-  .recently {
-    margin-top: 3rem;
-    margin-left: -7rem;    
+  .jumbotron { 
+    margin: 5rem 5rem;
+    padding-top: 2rem;
+    color: #fff;
   }
-  
+
+  .btn {
+    position: relative;
+    left: 25rem;
+    bottom: 5rem;
+    border-radius: 0;
+    border: 0;
+  }
+
+  hr {
+    margin-top: 0;
+  }
+
+  .description { margin: 2rem 2.5rem; }
+
   .task-description {
-    height: 250px;
+    height: 350px;
     background-color: #595959;
     margin-top: 2rem;
+  }
+
+  .jumbotron .time {
+    margin-top: 0;
+    font-weight: bolder;
+    color: #272727;
+    margin-left: 3rem;
   }
 
   .panel {
     right: 1.5rem;
     position: relative;
-    width: 33.8rem;
+    width: 33rem;
     border: 0;
   }
 
-  .btn {
-    top: 1rem;
+  .panel-success>.panel-heading {
+    background-color: #06b16f;
+    color: #fff;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
   }
 
-  .container_fluid .row {
-    margin-left: -77px;
-  }  
-}
+  .icon { padding-right: 3rem; }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /*smartphones*/
+  small { font-size: 100%; }
+
+  .data .comments { font-size: 10px; }
+
+  .svg-container {
+    height: 0;
+    width: 100%;
+    padding-top: 10rem;
+    position: relative;
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   /*tablets*/
+  * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: OpenSans;
+    line-height: 1.8;
+    letter-spacing: 1px;
+  }
+  
   .welcome { margin-left: 2rem; }
 
   .activity {
-    width: 500px;
-    height: 150px;    
-    margin-left: -7rem;    
+    color: #bcbcb7;
+    background-color: #343434;
+    width: 220px;
+    height: 200px;    
+    margin-left: 1rem;    
   }
 
-  .activities {
-    margin-top: 5rem;
+  .jumbotron {
+    margin: 2rem 5rem;    
   }
 
-  .task {
-    margin-top: 3rem;
-    margin-left: -7rem;    
+  .jumbotron .time {
+    padding-left: 3rem;
+    color: #272727;    
   }
   
-  .value { margin-right: 15rem; }
+  .view { margin-bottom: -5rem; }
 
-  .recently {
-    margin-top: 3rem;
-    margin-left: -7rem;    
+  .btn {
+    position: relative;
+    bottom: 5rem;
+    left: 80rem;
   }
+  .value { margin-right: 15rem; }
   
   .task-description {
-    height: 250px;
+    color: #fff;    
+    height: 400px;
     background-color: #595959;
-    margin-top: 2rem;
+    margin: 2rem 1.51rem;
   }
 
   .panel {
     right: 1.5rem;
     position: relative;
-    width: 33.8rem;
+    width: 15.29rem;
     border: 0;
   }
 
-  .btn {
-    top: 1rem;
+  .panel-heading {
+    padding: 0;
+    border: 0;
   }
 
-  .container_fluid .row {
-    margin-left: -77px;
+  .panel-success>.panel-heading {
+    background-color: #06b16f;
+    color: #fff;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
   }
-}
 
-@media only screen and (min-device-width: 768px)
-and (max-device-width: 1024px)
-and (-webkit-min-device-pixel-ratio:2) {  
-  /*ipad3 retina*/
+  .data .comments { font-size: 10px; }
 }
 
 @media only screen and (min-width:1024px) {
@@ -143,19 +190,12 @@ and (-webkit-min-device-pixel-ratio:2) {
 
   .activity {
     background-color: #343434;
-    height: 175px;
+    height: 190px;
     color: #bcbcb7;
+    margin-left: 2rem;
   }
 
   .welcome { margin-left: 9rem; }
-
-  .task {
-    margin-left: 3rem;
-  }
-
-  .recently {
-    margin-left: 3rem;
-  }
 
   .activities {
     margin-top: 5rem;
@@ -164,13 +204,13 @@ and (-webkit-min-device-pixel-ratio:2) {
   .value { text-align: center; }
 
   .jumbotron { 
-    margin: 6rem 6rem;
+    margin: 6rem 7rem;
     padding-top: 1rem;
     color: #fff;
   }
 
   .jumbotron .time {
-    margin-top: 0rem;
+    margin-top: 0;
     font-weight: bolder;
     color: #272727;
     margin-left: 3rem;
@@ -181,8 +221,6 @@ and (-webkit-min-device-pixel-ratio:2) {
     margin: 0 1.4rem;
     font-size: 1rem;
   }
-
-  .works { margin-top: 0; }
 
   .btn {
     position: absolute;
@@ -197,7 +235,7 @@ and (-webkit-min-device-pixel-ratio:2) {
   .panel {
     right: 1.5rem;
     position: relative;
-    width: 15.1rem;
+    width: 14.8rem;
     border: 0;
   }
 
@@ -221,7 +259,7 @@ and (-webkit-min-device-pixel-ratio:2) {
   .task-description {
     height: 300px;
     background-color: #595959;
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 
   h5 small {
@@ -273,8 +311,4 @@ and (-webkit-min-device-pixel-ratio:2) {
     fill: red;
     stroke-width: 1;
   }
-}
-
-@media only screen and (min-width:1824px) {
-  /*largescreens*/
 }
