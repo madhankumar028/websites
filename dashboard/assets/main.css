@@ -284,11 +284,6 @@ body {
     margin-top: 5rem;
   }
 
-  .graph {
-    height: 500px;
-    width: 700px;
-  }
-
   .graph .grid {
     stroke: #ccc;
     stroke-dasharray: 0;
